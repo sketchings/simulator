@@ -44,6 +44,8 @@ $ docker-compose down
 $ docker run -it -v `pwd`:/var/www/html simulator_php-fpm composer test
 ```
 
+## POSTMAN FOR TESTING
+A simple collection can be imported using Simulator.postman_colection.json
 
 ## DEPENDENCIES:
 
@@ -53,6 +55,10 @@ $ docker run -it -v `pwd`:/var/www/html simulator_php-fpm composer test
 - [slim/psr7](https://github.com/slimphp/Slim-Psr7): PSR-7 implementation for use with Slim 4.
 - [pimple/pimple](https://github.com/silexphp/Pimple): A small PHP dependency injection container.
 
+### LIST OF DEVELOPMENT DEPENDENCIES:
+
+- [phpunit/phpunit](https://github.com/sebastianbergmann/phpunit): The PHP Unit Testing framework.
+
 ## ENDPOINTS:
 
 ### API Routs:
@@ -60,4 +66,14 @@ $ docker run -it -v `pwd`:/var/www/html simulator_php-fpm composer test
 - Hello: `GET /api/vi/api`
 
 - Health Check: `GET /api/vi/status`
+
+- Get All Worlds: `GET /api/vi/worlds`
+
+- Create A New World: `POST /api/vi/worlds`
+                        
+- Get A Single World: `GET /api/vi/worlds/{id}`
+                            
+- Update a World: `PUT /api/vi/worlds/{id}`
+                            
+- Delete a World: `DELETE /api/vi/worlds/{id}`
 
